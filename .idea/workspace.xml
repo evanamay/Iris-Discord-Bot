@@ -5,26 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f4cdd67a-ca4b-46fd-9e9e-008dfa01435f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/me/evana/command/Config.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/me/evana/command/ICommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/me/evana/command/IrisMain.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/me/evana/command/Listener.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/me/evana/command/commands/CommandContext.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/me/evana/command/commands/CommandManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/me/evana/command/commands/RiotMain.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/me/evana/command/commands/command/HelpCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/me/evana/command/commands/command/SummonerCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/me/evana/command/database/SQLiteDataSource.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Iris.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Events/HelloEvent.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/IrisMain.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Events/HelloEvent.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/IrisMain.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,6 +20,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="PREVIOUS_COMMIT_AUTHORS">
+      <list>
+        <option value="Evan May &lt;evanamay@gmail.com&gt;" />
+      </list>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
@@ -185,6 +171,14 @@
       <option name="presentableId" value="Default" />
       <updated>1584551330923</updated>
     </task>
+    <task id="LOCAL-00001" summary="Copied an existing framework from user duncte123. Creating a database as of now.">
+      <created>1614725540826</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1614725540826</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TodoView">
@@ -227,6 +221,11 @@
       <window_info anchor="right" id="Palette&#9;" order="6" />
       <window_info anchor="right" id="Maven Projects" order="7" />
     </layout>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Copied an existing framework from user duncte123. Creating a database as of now." />
+    <option name="LAST_COMMIT_MESSAGE" value="Copied an existing framework from user duncte123. Creating a database as of now." />
+    <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/Iris.iml">
