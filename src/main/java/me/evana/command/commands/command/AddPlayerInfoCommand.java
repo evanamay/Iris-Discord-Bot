@@ -34,7 +34,8 @@ public class AddPlayerInfoCommand implements ICommand {
         try {
             Summoner summoner = riot.getSummonerByName(Platform.getPlatformByName(args.get(1)), args.get(0));
             if (alreadyExists(summoner, args.get(1))) {
-                channel.sendMessage("Summoner name already exists");
+                channel.sendMessage("Summoner name already exists").queue();
+                return;
             }
             addPlayerInfo(summoner, args.get(1));
 

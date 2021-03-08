@@ -2,6 +2,7 @@ package me.evana.command.commands;
 
 import me.evana.command.ICommand;
 import me.evana.command.commands.command.AddPlayerInfoCommand;
+import me.evana.command.commands.command.GetLast3Games;
 import me.evana.command.commands.command.HelpCommand;
 //import me.evana.command.commands.command.SummonerCommand;
 import me.evana.command.commands.command.SetPrefixCommand;
@@ -22,6 +23,7 @@ public class CommandManager {
         addCommand(new HelpCommand(this));
         addCommand(new SetPrefixCommand());
         addCommand(new AddPlayerInfoCommand());
+        addCommand(new GetLast3Games());
     }
 
     private void addCommand(ICommand cmd) {
@@ -65,7 +67,11 @@ public class CommandManager {
 
             CommandContext ctx = new CommandContext(event, args);
 
-            cmd.handle(ctx);
+            try {
+                cmd.handle(ctx);
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
         }
     }
 }

@@ -5,22 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f4cdd67a-ca4b-46fd-9e9e-008dfa01435f" name="Default Changelist" comment="Sending over new files from IDE">
-      <change afterPath="$PROJECT_DIR$/src/main/java/me/evana/command/commands/command/AddPlayerInfoCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/champion.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/me/evana/command/commands/RiotMatch.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/me/evana/command/commands/command/GetLast3Games.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/queues.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/me/evana/command/ICommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/evana/command/ICommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/me/evana/command/Listener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/evana/command/Listener.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/me/evana/command/commands/CommandManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/evana/command/commands/CommandManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/me/evana/command/commands/RiotMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/evana/command/commands/RiotMain.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/me/evana/command/commands/command/SetPrefixCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/evana/command/commands/command/SetPrefixCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/me/evana/command/commands/command/SummonerCommand.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/me/evana/command/database/SQLiteDataSource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/evana/command/database/SQLiteDataSource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/me/evana/command/commands/command/AddPlayerInfoCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/evana/command/commands/command/AddPlayerInfoCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/champion.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/champion.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/me/evana/command/ICommand.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/me/evana/command/ICommand.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/me/evana/command/Listener.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/me/evana/command/Listener.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/me/evana/command/commands/CommandManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/me/evana/command/commands/CommandManager.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/me/evana/command/commands/RiotMain.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/me/evana/command/commands/RiotMain.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/me/evana/command/database/SQLiteDataSource.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/me/evana/command/database/SQLiteDataSource.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/me/evana/command/commands/command/AddPlayerInfoCommand.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/me/evana/command/commands/command/AddPlayerInfoCommand.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,6 +34,14 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/src/main/java/me/evana/command/Listener.java" root0="SKIP_INSPECTION" />
@@ -113,7 +118,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1614625171861" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../JDA4-tutorials" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -127,6 +132,9 @@
     <property name="settings.editor.selected.configurable" value="database.data.csv.formats" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\evana\IdeaProjects\Iris-Discord-Bot\src\main\resources" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\evana\IdeaProjects\Iris-Discord-Bot\src\main\resources" />
     </key>
@@ -187,7 +195,7 @@
       <workItem from="1614725634986" duration="3543000" />
       <workItem from="1614874168195" duration="1606000" />
       <workItem from="1614986839121" duration="2075000" />
-      <workItem from="1615230955527" duration="7779000" />
+      <workItem from="1615230955527" duration="15851000" />
     </task>
     <task id="LOCAL-00001" summary="Sending over new files from IDE">
       <created>1614725824010</created>
@@ -203,7 +211,14 @@
       <option name="project" value="LOCAL" />
       <updated>1615231007276</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Made my database for containing the information of summoners accounts. This will be used to give further information about the accounts.">
+      <created>1615238867819</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1615238867819</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TodoView">
@@ -294,19 +309,31 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Sending over new files from IDE" />
     <MESSAGE value="This makes the template for a database that will house player information" />
-    <option name="LAST_COMMIT_MESSAGE" value="This makes the template for a database that will house player information" />
+    <MESSAGE value="Made my database for containing the information of summoners accounts. This will be used to give further information about the accounts." />
+    <option name="LAST_COMMIT_MESSAGE" value="Made my database for containing the information of summoners accounts. This will be used to give further information about the accounts." />
   </component>
   <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/me/evana/command/commands/command/AddPlayerInfoCommand.java</url>
+          <line>54</line>
+          <option name="timeStamp" value="9" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
     <pin-to-top-manager>
       <pinned-members>
         <PinnedItemInfo parentTag="me.evana.command.commands.CommandManager" memberName="commands" />
         <PinnedItemInfo parentTag="me.evana.command.commands.command.HelpCommand" memberName="manager" />
+        <PinnedItemInfo parentTag="net.rithms.riot.api.endpoints.match.dto.MatchReference" memberName="champion" />
       </pinned-members>
     </pin-to-top-manager>
     <watches-manager>
       <configuration name="Application">
         <watch expression="((HikariProxyResultSet)rs).delegate" custom="com.zaxxer.hikari.pool.HikariProxyResultSet" />
         <watch expression="rs" />
+        <watch expression="a.get(0).platformId" />
       </configuration>
     </watches-manager>
   </component>
