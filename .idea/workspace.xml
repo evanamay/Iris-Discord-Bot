@@ -5,18 +5,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f4cdd67a-ca4b-46fd-9e9e-008dfa01435f" name="Default Changelist" comment="Sending over new files from IDE">
-      <change afterPath="$PROJECT_DIR$/src/main/java/me/evana/command/VeryBadDesign.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/me/evana/command/commands/command/SetPrefixCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/logback.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/me/evana/command/commands/command/AddPlayerInfoCommand.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/champion.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database.db" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/me/evana/command/ICommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/evana/command/ICommand.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/me/evana/command/Listener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/evana/command/Listener.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/me/evana/command/commands/CommandManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/evana/command/commands/CommandManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/me/evana/command/commands/command/HelpCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/evana/command/commands/command/HelpCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/me/evana/command/commands/RiotMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/evana/command/commands/RiotMain.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/me/evana/command/commands/command/SetPrefixCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/evana/command/commands/command/SetPrefixCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/me/evana/command/commands/command/SummonerCommand.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/me/evana/command/database/SQLiteDataSource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/evana/command/database/SQLiteDataSource.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/me/evana/command/IrisMain.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/me/evana/command/IrisMain.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/me/evana/command/ICommand.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/me/evana/command/ICommand.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/me/evana/command/Listener.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/me/evana/command/Listener.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/me/evana/command/commands/CommandManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/me/evana/command/commands/CommandManager.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/me/evana/command/commands/RiotMain.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/me/evana/command/commands/RiotMain.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/me/evana/command/database/SQLiteDataSource.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/me/evana/command/database/SQLiteDataSource.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -123,6 +126,11 @@
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="database.data.csv.formats" />
   </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\evana\IdeaProjects\Iris-Discord-Bot\src\main\resources" />
+    </key>
+  </component>
   <component name="RunManager" selected="Application.IrisMain (1)">
     <configuration name="IrisMain (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="me.evana.command.IrisMain" />
@@ -144,13 +152,15 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="class" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -177,6 +187,7 @@
       <workItem from="1614725634986" duration="3543000" />
       <workItem from="1614874168195" duration="1606000" />
       <workItem from="1614986839121" duration="2075000" />
+      <workItem from="1615230955527" duration="7779000" />
     </task>
     <task id="LOCAL-00001" summary="Sending over new files from IDE">
       <created>1614725824010</created>
@@ -185,7 +196,14 @@
       <option name="project" value="LOCAL" />
       <updated>1614725824010</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="This makes the template for a database that will house player information">
+      <created>1615231007276</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1615231007276</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TodoView">
@@ -275,7 +293,22 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Sending over new files from IDE" />
-    <option name="LAST_COMMIT_MESSAGE" value="Sending over new files from IDE" />
+    <MESSAGE value="This makes the template for a database that will house player information" />
+    <option name="LAST_COMMIT_MESSAGE" value="This makes the template for a database that will house player information" />
+  </component>
+  <component name="XDebuggerManager">
+    <pin-to-top-manager>
+      <pinned-members>
+        <PinnedItemInfo parentTag="me.evana.command.commands.CommandManager" memberName="commands" />
+        <PinnedItemInfo parentTag="me.evana.command.commands.command.HelpCommand" memberName="manager" />
+      </pinned-members>
+    </pin-to-top-manager>
+    <watches-manager>
+      <configuration name="Application">
+        <watch expression="((HikariProxyResultSet)rs).delegate" custom="com.zaxxer.hikari.pool.HikariProxyResultSet" />
+        <watch expression="rs" />
+      </configuration>
+    </watches-manager>
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/Iris.iml">

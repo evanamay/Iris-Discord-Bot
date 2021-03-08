@@ -1,11 +1,12 @@
 package me.evana.command.commands;
 
-import me.evana.command.Config;
 import me.evana.command.ICommand;
+import me.evana.command.commands.command.AddPlayerInfoCommand;
 import me.evana.command.commands.command.HelpCommand;
 //import me.evana.command.commands.command.SummonerCommand;
 import me.evana.command.commands.command.SetPrefixCommand;
 import net.dv8tion.jda.api.events.message.guild.GuildMessageReceivedEvent;
+import net.rithms.riot.api.RiotApiException;
 
 import javax.annotation.Nullable;
 import java.util.ArrayList;
@@ -20,7 +21,7 @@ public class CommandManager {
     public CommandManager() {
         addCommand(new HelpCommand(this));
         addCommand(new SetPrefixCommand());
-        //addCommand(new SummonerCommand());
+        addCommand(new AddPlayerInfoCommand());
     }
 
     private void addCommand(ICommand cmd) {
@@ -50,7 +51,7 @@ public class CommandManager {
         return null;
     }
 
-    public void handle(GuildMessageReceivedEvent event, String prefix) {
+    public void handle(GuildMessageReceivedEvent event, String prefix) throws RiotApiException {
         String[] split = event.getMessage().getContentRaw()
                 .replaceFirst("(?i)" + Pattern.quote(prefix), "")
                 .split("\\s+");

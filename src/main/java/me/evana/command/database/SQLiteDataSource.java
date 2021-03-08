@@ -54,7 +54,25 @@ public class SQLiteDataSource {
         } catch (SQLException e) {
             e.printStackTrace();
         }
+
+        try (final Statement statement = getConnection().createStatement()){
+            // language=SQLite
+            statement.execute("CREATE TABLE IF NOT EXISTS player_information (" +
+                    "summoner_name VARCHAR(255)," +
+                    "region VARCHAR(255)," +
+                    "summoner_id VARCHAR(255)," +
+                    "account_id VARCHAR(255)," +
+                    "puuid VARCHAR(255)" +
+                    ");");
+
+        } catch(SQLException e){
+            e.printStackTrace();
+        }
+
     }
+
+
+
 
     private SQLiteDataSource() {
     }

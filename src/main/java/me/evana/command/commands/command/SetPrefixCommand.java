@@ -58,6 +58,7 @@ public class SetPrefixCommand implements ICommand {
             preparedStatement.setString(2, String.valueOf(guildId));
 
             preparedStatement.executeUpdate();
+
         } catch (SQLException e) {
             e.printStackTrace();
         }
