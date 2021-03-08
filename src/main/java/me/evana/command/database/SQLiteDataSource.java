@@ -20,6 +20,7 @@ public class SQLiteDataSource {
     static {
         try {
             final File dbFile = new File("database.db");
+
             if (!dbFile.exists()) {
                 if (dbFile.createNewFile()) {
                     LOGGER.info("Created database file");
@@ -27,6 +28,7 @@ public class SQLiteDataSource {
                     LOGGER.info("Could not create database file");
                 }
             }
+
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -39,15 +41,16 @@ public class SQLiteDataSource {
         ds = new HikariDataSource(config);
 
         try (final Statement statement = getConnection().createStatement()) {
-
-            final String defaultPrefix = Config.get("PREFIX");
+            final String defaultPrefix = Config.get("prefix");
 
             // language=SQLite
-            statement.execute("CREATE TABLE IF NOT EXISTS guild_settings(" +
+            statement.execute("CREATE TABLE IF NOT EXISTS guild_settings (" +
                     "id INTEGER PRIMARY KEY AUTOINCREMENT," +
                     "guild_id VARCHAR(20) NOT NULL," +
                     "prefix VARCHAR(255) NOT NULL DEFAULT '" + defaultPrefix + "'" +
                     ");");
+
+            LOGGER.info("Table initialised");
         } catch (SQLException e) {
             e.printStackTrace();
         }
@@ -59,5 +62,7 @@ public class SQLiteDataSource {
     public static Connection getConnection() throws SQLException {
         return ds.getConnection();
     }
+
+
 }
 

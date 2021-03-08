@@ -4,7 +4,21 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f4cdd67a-ca4b-46fd-9e9e-008dfa01435f" name="Default Changelist" comment="" />
+    <list default="true" id="f4cdd67a-ca4b-46fd-9e9e-008dfa01435f" name="Default Changelist" comment="Sending over new files from IDE">
+      <change afterPath="$PROJECT_DIR$/src/main/java/me/evana/command/VeryBadDesign.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/me/evana/command/commands/command/SetPrefixCommand.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/logback.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database.db" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/me/evana/command/Listener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/evana/command/Listener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/me/evana/command/commands/CommandManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/evana/command/commands/CommandManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/me/evana/command/commands/command/HelpCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/evana/command/commands/command/HelpCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/me/evana/command/database/SQLiteDataSource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/evana/command/database/SQLiteDataSource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/me/evana/command/IrisMain.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/me/evana/command/IrisMain.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/me/evana/command/Listener.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/me/evana/command/Listener.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/me/evana/command/database/SQLiteDataSource.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/me/evana/command/database/SQLiteDataSource.class" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -13,12 +27,16 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Tag Library Descriptor" />
         <option value="Class" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/src/main/java/me/evana/command/Listener.java" root0="SKIP_INSPECTION" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -88,15 +106,37 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1614625171861" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../JDA4-tutorials" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Modules" />
-    <property name="project.structure.proportion" value="0.0" />
-    <property name="project.structure.side.proportion" value="0.0" />
-    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="database.data.csv.formats" />
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.IrisMain (1)">
+    <configuration name="IrisMain (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="me.evana.command.IrisMain" />
+      <module name="Iris" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="me.evana.command.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="IrisMain" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="IrisMain" />
       <module name="Iris" />
@@ -117,10 +157,12 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.IrisMain (1)" />
         <item itemvalue="Application.IrisMain" />
       </list>
     </recent_temporary>
   </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -132,7 +174,18 @@
       <option name="presentableId" value="Default" />
       <updated>1584551330923</updated>
       <workItem from="1614725429912" duration="3000" />
+      <workItem from="1614725634986" duration="3543000" />
+      <workItem from="1614874168195" duration="1606000" />
+      <workItem from="1614986839121" duration="2075000" />
     </task>
+    <task id="LOCAL-00001" summary="Sending over new files from IDE">
+      <created>1614725824010</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1614725824010</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TodoView">
@@ -204,6 +257,25 @@
       <window_info anchor="right" id="Palette&#9;" order="6" />
       <window_info anchor="right" id="Maven Projects" order="7" />
     </layout-to-restore>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Sending over new files from IDE" />
+    <option name="LAST_COMMIT_MESSAGE" value="Sending over new files from IDE" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/Iris.iml">

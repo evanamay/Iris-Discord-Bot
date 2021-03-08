@@ -4,6 +4,7 @@ import me.evana.command.Config;
 import me.evana.command.ICommand;
 import me.evana.command.commands.command.HelpCommand;
 //import me.evana.command.commands.command.SummonerCommand;
+import me.evana.command.commands.command.SetPrefixCommand;
 import net.dv8tion.jda.api.events.message.guild.GuildMessageReceivedEvent;
 
 import javax.annotation.Nullable;
@@ -18,6 +19,7 @@ public class CommandManager {
 
     public CommandManager() {
         addCommand(new HelpCommand(this));
+        addCommand(new SetPrefixCommand());
         //addCommand(new SummonerCommand());
     }
 
@@ -48,9 +50,9 @@ public class CommandManager {
         return null;
     }
 
-    public void handle(GuildMessageReceivedEvent event) {
+    public void handle(GuildMessageReceivedEvent event, String prefix) {
         String[] split = event.getMessage().getContentRaw()
-                .replaceFirst("(?i)" + Pattern.quote(Config.get("prefix")), "")
+                .replaceFirst("(?i)" + Pattern.quote(prefix), "")
                 .split("\\s+");
 
         String invoke = split[0].toLowerCase();
