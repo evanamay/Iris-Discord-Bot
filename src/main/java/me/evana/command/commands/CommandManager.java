@@ -1,11 +1,8 @@
 package me.evana.command.commands;
 
 import me.evana.command.ICommand;
-import me.evana.command.commands.command.AddPlayerInfoCommand;
-import me.evana.command.commands.command.GetLast3Games;
-import me.evana.command.commands.command.HelpCommand;
+import me.evana.command.commands.command.*;
 //import me.evana.command.commands.command.SummonerCommand;
-import me.evana.command.commands.command.SetPrefixCommand;
 import net.dv8tion.jda.api.events.message.guild.GuildMessageReceivedEvent;
 import net.rithms.riot.api.RiotApiException;
 
@@ -24,6 +21,8 @@ public class CommandManager {
         addCommand(new SetPrefixCommand());
         addCommand(new AddPlayerInfoCommand());
         addCommand(new GetLast3Games());
+        addCommand(new TestCommand());
+        addCommand(new MasteryCommand());
     }
 
     private void addCommand(ICommand cmd) {

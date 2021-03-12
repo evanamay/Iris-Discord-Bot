@@ -5,6 +5,7 @@ import me.evana.command.commands.CommandContext;
 import me.evana.command.commands.RiotMain;
 import me.evana.command.commands.RiotMatch;
 import me.evana.command.database.SQLiteDataSource;
+import me.evana.command.leagueinfo.DataHolder;
 import net.dv8tion.jda.api.entities.TextChannel;
 import net.rithms.riot.api.RiotApi;
 import net.rithms.riot.api.RiotApiException;
@@ -46,11 +47,11 @@ public class GetLast3Games implements ICommand {
 
             List<MatchReference> gameList = matchList.getMatches();
             channel.sendMessage("Last three games from " + args.get(0)).queue();
-            for (int i = 0; i < 3; i++) {
+            for (int i = 0; i < 5; i++) {
                 MatchReference currGame = gameList.get(i);
                 channel.sendMessage("Gamemode: " + RiotMatch.queueIdFinder(currGame.getQueue()) +
-                        "\nChampion: " + RiotMatch.champIdFinder(currGame.getChampion()) +
-                        "\nLane Selected: " + currGame.getLane() +
+                        "\nChampion: " + DataHolder.getChampById(currGame.getChampion()) +
+                        "\nLane: " + RiotMatch.laneFinder(currGame.getLane(),currGame.getRole()) +
                         "\nTime of Game: " + RiotMatch.dateFormatter(currGame.getTimestamp()) +
                         "\n\n"
                 ).queue();

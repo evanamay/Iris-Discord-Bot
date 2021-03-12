@@ -5,19 +5,24 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f4cdd67a-ca4b-46fd-9e9e-008dfa01435f" name="Default Changelist" comment="Sending over new files from IDE">
-      <change afterPath="$PROJECT_DIR$/src/main/java/me/evana/command/commands/RiotMatch.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/me/evana/command/commands/command/GetLast3Games.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/queues.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/me/evana/command/commands/command/MasteryCommand.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/me/evana/command/commands/command/TestCommand.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/me/evana/command/leagueinfo/Champion.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/me/evana/command/leagueinfo/DataHolder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/lane.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/me/evana/command/ICommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/evana/command/ICommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/me/evana/command/IrisMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/evana/command/IrisMain.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/me/evana/command/commands/CommandManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/evana/command/commands/CommandManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/me/evana/command/commands/RiotMatch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/evana/command/commands/RiotMatch.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/me/evana/command/commands/command/AddPlayerInfoCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/evana/command/commands/command/AddPlayerInfoCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/champion.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/champion.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/me/evana/command/ICommand.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/me/evana/command/ICommand.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/me/evana/command/commands/command/GetLast3Games.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/evana/command/commands/command/GetLast3Games.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/me/evana/command/database/SQLiteDataSource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/evana/command/database/SQLiteDataSource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/me/evana/command/IrisMain.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/me/evana/command/IrisMain.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/me/evana/command/commands/CommandManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/me/evana/command/commands/CommandManager.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/me/evana/command/commands/RiotMain.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/me/evana/command/commands/RiotMain.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/me/evana/command/commands/RiotMatch.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/me/evana/command/commands/RiotMatch.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/me/evana/command/commands/command/AddPlayerInfoCommand.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/me/evana/command/commands/command/AddPlayerInfoCommand.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/me/evana/command/commands/command/GetLast3Games.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/me/evana/command/commands/command/GetLast3Games.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,6 +33,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Tag Library Descriptor" />
+        <option value="Kotlin Class" />
         <option value="Class" />
       </list>
     </option>
@@ -126,10 +132,11 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="notes" value="Command todo:&#10;- quick lookup (no database, gives only small information)&#10;&#9;-top 5 champs&#10;&#9;-(maybe last 5 games kda)&#10;&#10;- lookup in database?&#10;&#10;&#10;&#10;Not Important rn:&#10;-add champion icons&#10;&#10;&#10;" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="database.data.csv.formats" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -160,15 +167,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -195,7 +200,10 @@
       <workItem from="1614725634986" duration="3543000" />
       <workItem from="1614874168195" duration="1606000" />
       <workItem from="1614986839121" duration="2075000" />
-      <workItem from="1615230955527" duration="15851000" />
+      <workItem from="1615230955527" duration="16405000" />
+      <workItem from="1615313670092" duration="9879000" />
+      <workItem from="1615489896698" duration="9000" />
+      <workItem from="1615566263511" duration="3385000" />
     </task>
     <task id="LOCAL-00001" summary="Sending over new files from IDE">
       <created>1614725824010</created>
@@ -218,7 +226,14 @@
       <option name="project" value="LOCAL" />
       <updated>1615238867819</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Created a command in which displays a summoners last three games played and gives information about each game. Mostly done to test the capabilties of the database/RiotApi interactions">
+      <created>1615247361025</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1615247361025</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TodoView">
@@ -310,15 +325,16 @@
     <MESSAGE value="Sending over new files from IDE" />
     <MESSAGE value="This makes the template for a database that will house player information" />
     <MESSAGE value="Made my database for containing the information of summoners accounts. This will be used to give further information about the accounts." />
-    <option name="LAST_COMMIT_MESSAGE" value="Made my database for containing the information of summoners accounts. This will be used to give further information about the accounts." />
+    <MESSAGE value="Created a command in which displays a summoners last three games played and gives information about each game. Mostly done to test the capabilties of the database/RiotApi interactions" />
+    <option name="LAST_COMMIT_MESSAGE" value="Created a command in which displays a summoners last three games played and gives information about each game. Mostly done to test the capabilties of the database/RiotApi interactions" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/me/evana/command/commands/command/AddPlayerInfoCommand.java</url>
-          <line>54</line>
-          <option name="timeStamp" value="9" />
+          <url>file://$PROJECT_DIR$/src/main/java/me/evana/command/commands/command/TestCommand.java</url>
+          <line>39</line>
+          <option name="timeStamp" value="15" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

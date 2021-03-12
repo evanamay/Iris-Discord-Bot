@@ -13,6 +13,10 @@ import java.util.Map;
 
 public class RiotMatch {
 
+
+    /*
+     * Formats the date taken from a MatchReference
+     */
     public static String dateFormatter (long timestamp){
         timestamp = timestamp/1000L;
         String date = new java.text.SimpleDateFormat("MM/dd/yyyy 'at' HH:mm:ss")
@@ -21,6 +25,9 @@ public class RiotMatch {
         return date;
     }
 
+    /*
+     * Locates the gamemode type from the queueId given from a MatchReference
+     */
     public static String queueIdFinder(long queueId) throws Exception {
         Object obj = new JSONParser().parse(new FileReader("src/main/resources/queues.json"));
         JSONArray jo = (JSONArray) obj;
@@ -35,20 +42,35 @@ public class RiotMatch {
         return "Error: Gamemode not found";
     }
 
-    public static String champIdFinder(int champKey) throws Exception {
-        Object obj = new JSONParser().parse(new FileReader("src/main/resources/champion.json"));
-        JSONObject jo = (JSONObject) obj;
-        Map champs = (Map) jo.get("data");
 
-        Iterator<Map.Entry> itr1 = champs.entrySet().iterator();
-        while(itr1.hasNext()){
-            Map.Entry pair = itr1.next();
-            Map specificChamp = (Map) pair.getValue();
-            if(champKey == Integer.parseInt((String) specificChamp.get("key"))){
-                return (String) pair.getKey();
+
+    /*
+     * Determines lane
+     */
+    public static String laneFinder(String lane, String role) throws Exception {
+        Object obj = new JSONParser().parse(new FileReader("src/main/resources/lane.json"));
+        Map jo = (JSONObject) obj;
+
+        String result = (String) jo.get(lane + " " + role);
+
+        if (result == null){
+            return "Unknown";
+        }else {
+            return result;
+        }
+
+    }
+
+    public static String getSummonerName(List<String> argfield, int argNum){
+        String summonerName = "";
+        for(int i = 0; i < argfield.size()-argNum; i++){
+            summonerName+=argfield.get(i);
+            if(i+1 != argfield.size()-1){
+                summonerName+=" ";
             }
         }
-        return "Champion not found";
+
+        return summonerName;
     }
 
 }

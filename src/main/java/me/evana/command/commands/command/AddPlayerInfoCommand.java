@@ -4,6 +4,8 @@ import me.evana.command.ICommand;
 import me.evana.command.commands.CommandContext;
 import me.evana.command.commands.RiotMain;
 import me.evana.command.database.SQLiteDataSource;
+import net.dv8tion.jda.api.MessageBuilder;
+import net.dv8tion.jda.api.entities.Member;
 import net.dv8tion.jda.api.entities.TextChannel;
 import net.rithms.riot.api.RiotApi;
 import net.rithms.riot.api.RiotApiException;
@@ -15,6 +17,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.List;
 
+import static me.evana.command.commands.RiotMatch.getSummonerName;
 import static net.rithms.riot.api.endpoints.static_data.constant.ItemTags.FROM;
 
 public class AddPlayerInfoCommand implements ICommand {
@@ -24,20 +27,24 @@ public class AddPlayerInfoCommand implements ICommand {
         final TextChannel channel = ctx.getChannel();
         final List<String> args = ctx.getArgs();
         final RiotApi riot = RiotMain.getRiotApi();
+        String summonerName = getSummonerName(args, 1);
+        String plat = args.get(args.size()-1);
+        String id = ctx.getEvent().getMessage().getMentionedMembers().get(0).getUser().getId();
 
-        if (args.isEmpty() || args.size() != 2) {
+        if (args.isEmpty()) {
             channel.sendMessage("Missing args").queue();
             return;
         }
 
 
+
         try {
-            Summoner summoner = riot.getSummonerByName(Platform.getPlatformByName(args.get(1)), args.get(0));
-            if (alreadyExists(summoner, args.get(1))) {
+            Summoner summoner = riot.getSummonerByName(Platform.getPlatformByName(plat), summonerName);
+            if (alreadyExists(summoner, plat, id)) {
                 channel.sendMessage("Summoner name already exists").queue();
                 return;
             }
-            addPlayerInfo(summoner, args.get(1));
+            addPlayerInfo(summoner, plat);
 
             channel.sendMessageFormat("Player " + summoner.getName() + " has been added to database!").queue();
         }catch (RiotApiException e){
@@ -45,15 +52,15 @@ public class AddPlayerInfoCommand implements ICommand {
         }
     }
 
-    private boolean alreadyExists(Summoner summoner, String region) {
+    private boolean alreadyExists(Summoner summoner, String region, String id) {
         try(ResultSet rs = SQLiteDataSource
             .getConnection()
             .createStatement()
-            .executeQuery("SELECT summoner_name, region FROM player_information")) {
+            .executeQuery("SELECT summoner_name, region, user_link FROM player_information")) {
 
             while(rs.next()){
-                if (summoner.getName().equals(rs.getString("summoner_name"))
-                && region.equals(rs.getString("region"))){
+                if ((summoner.getName().equals(rs.getString("summoner_name"))
+                && region.equals(rs.getString("region"))) || id.equals(rs.getString("user_link"))){
                     return true;
                 }
             }
@@ -93,5 +100,7 @@ public class AddPlayerInfoCommand implements ICommand {
             e.printStackTrace();
         }
     }
+
+
 
 }

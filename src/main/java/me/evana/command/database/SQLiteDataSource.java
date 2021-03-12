@@ -62,7 +62,8 @@ public class SQLiteDataSource {
                     "region VARCHAR(255)," +
                     "summoner_id VARCHAR(255)," +
                     "account_id VARCHAR(255)," +
-                    "puuid VARCHAR(255)" +
+                    "puuid VARCHAR(255)," +
+                    "user_link VARCHAR(255)" +
                     ");");
 
         } catch(SQLException e){
