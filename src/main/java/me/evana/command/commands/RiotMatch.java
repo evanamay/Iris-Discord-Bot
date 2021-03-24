@@ -54,13 +54,16 @@ public class RiotMatch {
         String result = (String) jo.get(lane + " " + role);
 
         if (result == null){
-            return "Unknown";
+            return "N/A";
         }else {
             return result;
         }
 
     }
 
+    /*
+     * Constructs a summoner name (used if the username has spaces)
+     */
     public static String getSummonerName(List<String> argfield, int argNum){
         String summonerName = "";
         for(int i = 0; i < argfield.size()-argNum; i++){

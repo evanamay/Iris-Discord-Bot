@@ -25,8 +25,8 @@ public class MasteryCommand implements ICommand {
         String summonerName = getSummonerName(args,2);
         String plat = args.get(args.size()-2);
 
-        if(args.isEmpty() || Integer.parseInt(args.get(args.size()-1)) > 50 || Integer.parseInt(args.get(args.size()-1)) < 1){
-            channel.sendMessage("Wrong number of arguments").queue();
+        if(args.size() != 3 || Integer.parseInt(args.get(args.size()-1)) > 50 || Integer.parseInt(args.get(args.size()-1)) < 1){
+            channel.sendMessage("Error: Wrong number of arguments").queue();
             return;
         }
 
@@ -38,7 +38,7 @@ public class MasteryCommand implements ICommand {
 
         message.setColor(Color.blue);
 
-        message.setTitle("Profile Overview of " + summonerName);
+        message.setTitle(summonerName);
         List<ChampionMastery> championMasteries = riot.getChampionMasteriesBySummoner
                 (Platform.getPlatformByName("NA"),riot.getSummonerByName(Platform.getPlatformByName(plat),summonerName).getId());
 

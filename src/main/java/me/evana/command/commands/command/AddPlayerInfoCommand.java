@@ -27,16 +27,16 @@ public class AddPlayerInfoCommand implements ICommand {
         final TextChannel channel = ctx.getChannel();
         final List<String> args = ctx.getArgs();
         final RiotApi riot = RiotMain.getRiotApi();
-        String summonerName = getSummonerName(args, 1);
-        String plat = args.get(args.size()-1);
-        String id = ctx.getEvent().getMessage().getMentionedMembers().get(0).getUser().getId();
+        String summonerName = getSummonerName(args, 2);
+        String plat = args.get(args.size()-2);
 
-        if (args.isEmpty()) {
+
+        if (args.isEmpty() || ctx.getEvent().getMessage().getMentionedMembers().size() != 1) {
             channel.sendMessage("Missing args").queue();
             return;
         }
 
-
+        String id = ctx.getEvent().getMessage().getMentionedMembers().get(0).getUser().getId();
 
         try {
             Summoner summoner = riot.getSummonerByName(Platform.getPlatformByName(plat), summonerName);
@@ -44,7 +44,7 @@ public class AddPlayerInfoCommand implements ICommand {
                 channel.sendMessage("Summoner name already exists").queue();
                 return;
             }
-            addPlayerInfo(summoner, plat);
+            addPlayerInfo(summoner, plat, id);
 
             channel.sendMessageFormat("Player " + summoner.getName() + " has been added to database!").queue();
         }catch (RiotApiException e){
@@ -83,19 +83,20 @@ public class AddPlayerInfoCommand implements ICommand {
     }
 
 
-    private void addPlayerInfo(Summoner summoner, String region){
+    private void addPlayerInfo(Summoner summoner, String region, String discordId){
 
         try (final PreparedStatement preparedStatement = SQLiteDataSource
                 .getConnection()
                 // language=SQLite
-                .prepareStatement("INSERT INTO player_information(summoner_name,region,summoner_id,account_id,puuid) values(?,?,?,?,?)")){
+                .prepareStatement("INSERT INTO player_information(summoner_name,region,summoner_id,account_id,puuid,user_link) values(?,?,?,?,?,?)")){
             preparedStatement.setString(1,summoner.getName());
             preparedStatement.setString(2,region);
             preparedStatement.setString(3,summoner.getId());
             preparedStatement.setString(4,summoner.getAccountId());
             preparedStatement.setString(5,summoner.getPuuid());
-
+            preparedStatement.setString(6,discordId);
             preparedStatement.executeUpdate();
+
         }catch (SQLException e){
             e.printStackTrace();
         }

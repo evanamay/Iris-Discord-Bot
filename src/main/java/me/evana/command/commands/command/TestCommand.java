@@ -30,14 +30,16 @@ public class TestCommand implements ICommand {
         // summonerName = getSummonerName(args,2);
         //String plat = args.get(args.size()-2);
 
-        if(args.isEmpty()){
-            channel.sendMessage("Wrong number of arguments").queue();
+        if(ctx.getEvent().getMessage().getMentionedMembers().size() != 1){
+            channel.sendMessage("Error: Please mention one user").queue();
             return;
         }
 
+
+
         String id= ctx.getEvent().getMessage().getMentionedMembers().get(0).getUser().getId();
         channel.sendMessage(id).queue();
-
+        return;
 
     }
 

@@ -50,7 +50,7 @@ public class GetLast3Games implements ICommand {
             for (int i = 0; i < 5; i++) {
                 MatchReference currGame = gameList.get(i);
                 channel.sendMessage("Gamemode: " + RiotMatch.queueIdFinder(currGame.getQueue()) +
-                        "\nChampion: " + DataHolder.getChampById(currGame.getChampion()) +
+                        "\nChampion: " + DataHolder.getChampById(currGame.getChampion()).getName() +
                         "\nLane: " + RiotMatch.laneFinder(currGame.getLane(),currGame.getRole()) +
                         "\nTime of Game: " + RiotMatch.dateFormatter(currGame.getTimestamp()) +
                         "\n\n"
