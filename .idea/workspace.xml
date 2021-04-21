@@ -5,17 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f4cdd67a-ca4b-46fd-9e9e-008dfa01435f" name="Default Changelist" comment="Sending over new files from IDE">
+      <change afterPath="$PROJECT_DIR$/src/main/java/me/evana/command/commands/commandQuick/QMasteryCommand.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/me/evana/command/commands/RiotMatch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/evana/command/commands/RiotMatch.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/me/evana/command/commands/command/AddPlayerInfoCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/evana/command/commands/command/AddPlayerInfoCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/me/evana/command/commands/CommandManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/evana/command/commands/CommandManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/me/evana/command/commands/command/GetLast3Games.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/evana/command/commands/command/GetLast3Games.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/me/evana/command/commands/command/MasteryCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/evana/command/commands/command/MasteryCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/me/evana/command/commands/command/TestCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/evana/command/commands/command/TestCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/me/evana/command/commands/RiotMatch.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/me/evana/command/commands/RiotMatch.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/me/evana/command/commands/command/AddPlayerInfoCommand.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/me/evana/command/commands/command/AddPlayerInfoCommand.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/me/evana/command/commands/command/TestCommand.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/me/evana/command/commands/command/TestCommand.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/me/evana/command/database/SQLiteDataSource.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/me/evana/command/database/SQLiteDataSource.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/me/evana/command/commands/command/GetLast3Games.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/me/evana/command/commands/command/GetLast3Games.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/me/evana/command/commands/command/MasteryCommand.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/me/evana/command/commands/command/MasteryCommand.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -132,6 +130,10 @@
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="me.evana.command" />
+      <recent name="" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\evana\IdeaProjects\Iris-Discord-Bot\src\main\resources" />
     </key>
@@ -139,10 +141,10 @@
       <recent name="C:\Users\evana\IdeaProjects\Iris-Discord-Bot\src\main\resources" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.IrisMain (1)">
+  <component name="RunManager" selected="Application.IrisMain">
     <configuration name="IrisMain (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="me.evana.command.IrisMain" />
-      <module name="Iris" />
+      <module name="Iris-Discord-Bot" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="me.evana.command.*" />
@@ -153,28 +155,34 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="IrisMain" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="IrisMain" />
-      <module name="Iris" />
+    <configuration name="IrisMain" type="Application" factoryName="Application" nameIsGenerated="true">
+      <option name="ALTERNATIVE_JRE_PATH" value="1.8" />
+      <option name="MAIN_CLASS_NAME" value="me.evana.command.IrisMain" />
+      <module name="Iris-Discord-Bot" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="class" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <list>
+      <item itemvalue="Application.IrisMain" />
+      <item itemvalue="Application.IrisMain (1)" />
+    </list>
     <recent_temporary>
       <list>
         <item itemvalue="Application.IrisMain (1)" />
-        <item itemvalue="Application.IrisMain" />
       </list>
     </recent_temporary>
   </component>
@@ -198,7 +206,11 @@
       <workItem from="1615489896698" duration="9000" />
       <workItem from="1615566263511" duration="3556000" />
       <workItem from="1616608829040" duration="284000" />
-      <workItem from="1616609187725" duration="1645000" />
+      <workItem from="1616609187725" duration="1834000" />
+      <workItem from="1616763325529" duration="145000" />
+      <workItem from="1616776630199" duration="19000" />
+      <workItem from="1619039405972" duration="255000" />
+      <workItem from="1619039678759" duration="2026000" />
     </task>
     <task id="LOCAL-00001" summary="Sending over new files from IDE">
       <created>1614725824010</created>
@@ -235,7 +247,14 @@
       <option name="project" value="LOCAL" />
       <updated>1615569828764</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Finished implementation of the user match system. Now when a user is added to the database for quick access and lookup, added functionality so that eventually, using commands can be done by just mentioning a user instead of writing all of their information out.">
+      <created>1616611027726</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1616611027726</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TodoView">
@@ -329,7 +348,8 @@
     <MESSAGE value="Made my database for containing the information of summoners accounts. This will be used to give further information about the accounts." />
     <MESSAGE value="Created a command in which displays a summoners last three games played and gives information about each game. Mostly done to test the capabilties of the database/RiotApi interactions" />
     <MESSAGE value="Can now link a discord user with a riot account, making it possible to get information about a player inside a server by just @ing them." />
-    <option name="LAST_COMMIT_MESSAGE" value="Can now link a discord user with a riot account, making it possible to get information about a player inside a server by just @ing them." />
+    <MESSAGE value="Finished implementation of the user match system. Now when a user is added to the database for quick access and lookup, added functionality so that eventually, using commands can be done by just mentioning a user instead of writing all of their information out." />
+    <option name="LAST_COMMIT_MESSAGE" value="Finished implementation of the user match system. Now when a user is added to the database for quick access and lookup, added functionality so that eventually, using commands can be done by just mentioning a user instead of writing all of their information out." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -340,9 +360,9 @@
           <option name="timeStamp" value="15" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/me/evana/command/commands/command/AddPlayerInfoCommand.java</url>
-          <line>41</line>
-          <option name="timeStamp" value="16" />
+          <url>file://$PROJECT_DIR$/src/main/java/me/evana/command/commands/command/MasteryCommand.java</url>
+          <line>61</line>
+          <option name="timeStamp" value="19" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

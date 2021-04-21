@@ -47,7 +47,7 @@ public class GetLast3Games implements ICommand {
 
             List<MatchReference> gameList = matchList.getMatches();
             channel.sendMessage("Last three games from " + args.get(0)).queue();
-            for (int i = 0; i < 5; i++) {
+            for (int i = 0; i < 3; i++) {
                 MatchReference currGame = gameList.get(i);
                 channel.sendMessage("Gamemode: " + RiotMatch.queueIdFinder(currGame.getQueue()) +
                         "\nChampion: " + DataHolder.getChampById(currGame.getChampion()).getName() +
