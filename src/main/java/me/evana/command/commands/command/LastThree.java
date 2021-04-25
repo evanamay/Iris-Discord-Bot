@@ -65,9 +65,16 @@ public class LastThree implements ICommand {
                                 rs.getString("summoner_name"));
                         String msg = "";
                         MatchReference currGame = gameList.get(i);
-                        String lane = currGame.getLane().substring(0,1).toUpperCase() +
-                                currGame.getLane().substring(1).toLowerCase();
-                        msg += "Gamemode: " + RiotMatch.queueIdFinder(currGame.getQueue()) +
+                        String gamemode = RiotMatch.queueIdFinder(currGame.getQueue());
+                        String lane;
+                        if(gamemode.equals("Aram")){
+                            lane = "Mid";
+                        }else{
+                            lane = currGame.getLane().substring(0,1).toUpperCase() +
+                                    currGame.getLane().substring(1).toLowerCase();
+                        }
+
+                        msg += "Gamemode: " + gamemode +
                                 "\nChampion: " + DataHolder.getChampById(currGame.getChampion()).getName() +
                                 "\nLane: " + lane +
                                 "\nTime of Game: " + RiotMatch.dateFormatter(currGame.getTimestamp()) +

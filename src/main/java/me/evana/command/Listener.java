@@ -3,6 +3,8 @@ package me.evana.command;
 import me.duncte123.botcommons.BotCommons;
 import me.evana.command.commands.CommandManager;
 import me.evana.command.database.SQLiteDataSource;
+import net.dv8tion.jda.api.JDA;
+import net.dv8tion.jda.api.entities.Emote;
 import net.dv8tion.jda.api.entities.User;
 import net.dv8tion.jda.api.events.ReadyEvent;
 import net.dv8tion.jda.api.events.message.guild.GuildMessageReceivedEvent;
@@ -12,17 +14,29 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import javax.annotation.Nonnull;
+import java.io.IOException;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.List;
+
+import static me.evana.command.emotes.EmoteHandler.loadEmotes;
 
 public class Listener extends ListenerAdapter {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(Listener.class);
     private final CommandManager manager = new CommandManager();
-
+    private boolean FirstTime = true;
     @Override
     public void onReady(@Nonnull ReadyEvent event) {
+        if(FirstTime){
+            try {
+                loadEmotes();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+            FirstTime = false;
+        }
         LOGGER.info("{} is ready", event.getJDA().getSelfUser().getAsTag());
     }
 

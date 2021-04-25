@@ -3,6 +3,7 @@ package me.evana.command.commands;
 import me.evana.command.ICommand;
 import me.evana.command.commands.command.*;
 //import me.evana.command.commands.command.SummonerCommand;
+import me.evana.command.commands.commandQuick.QCurrGame;
 import me.evana.command.commands.commandQuick.QLastThree;
 import me.evana.command.commands.commandQuick.QMasteryCommand;
 import net.dv8tion.jda.api.events.message.guild.GuildMessageReceivedEvent;
@@ -27,6 +28,7 @@ public class CommandManager {
         addCommand(new QMasteryCommand());
         addCommand(new MasteryCommand());
         addCommand(new LastThree());
+        addCommand(new QCurrGame());
     }
 
     private void addCommand(ICommand cmd) {

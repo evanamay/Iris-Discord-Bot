@@ -4,15 +4,27 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f4cdd67a-ca4b-46fd-9e9e-008dfa01435f" name="Default Changelist" comment="Started to transition over to using the &quot;@user&quot; feature of discord for quick access to peoples information. Started a &quot;q&quot; Command things to make a seperate option to lookup players who are not in the database">
-      <change afterPath="$PROJECT_DIR$/src/main/java/me/evana/command/commands/command/LastThree.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
+    <list default="true" id="f4cdd67a-ca4b-46fd-9e9e-008dfa01435f" name="Default Changelist" comment="Created the quick and main version of &quot;last three games played&quot; command. Also made the command for &quot;last three&quot; shorter and more concise.">
+      <change afterPath="$PROJECT_DIR$/src/main/java/me/evana/command/commands/commandQuick/QCurrGame.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/me/evana/command/emotes/ChampionEmotes.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/me/evana/command/emotes/EmoteHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/me/evana/command/emotes/EmoteUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/currentEmotes" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/me/evana/command/IrisMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/evana/command/IrisMain.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/me/evana/command/Listener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/evana/command/Listener.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/me/evana/command/commands/CommandManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/evana/command/commands/CommandManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/me/evana/command/commands/RiotMatch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/evana/command/commands/RiotMatch.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/me/evana/command/commands/command/GetLast3Games.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/evana/command/commands/commandQuick/QLastThree.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/me/evana/command/commands/command/MasteryCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/evana/command/commands/command/MasteryCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/me/evana/command/commands/command/LastThree.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/evana/command/commands/command/LastThree.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/me/evana/command/commands/commandQuick/QLastThree.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/evana/command/commands/commandQuick/QLastThree.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/me/evana/command/leagueinfo/Champion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/evana/command/leagueinfo/Champion.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/me/evana/command/leagueinfo/DataHolder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/evana/command/leagueinfo/DataHolder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/me/evana/command/IrisMain.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/me/evana/command/IrisMain.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/me/evana/command/Listener.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/me/evana/command/Listener.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/me/evana/command/commands/CommandManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/me/evana/command/commands/CommandManager.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/me/evana/command/commands/RiotMatch.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/me/evana/command/commands/RiotMatch.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/me/evana/command/leagueinfo/Champion.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/me/evana/command/leagueinfo/Champion.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/me/evana/command/leagueinfo/DataHolder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/me/evana/command/leagueinfo/DataHolder.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -122,7 +134,7 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="notes" value="Command todo:&#10;- quick lookup (no database, gives only small information)&#10;&#9;-top 5 champs&#10;&#9;-(maybe last 5 games kda)&#10;&#10;&#10;&#10;getlast3games command&#10;&#9;- may be changed because i want to make it &#10;&#9;  more like part of quick lookup&#10;&#10;make seperate commands for database lookups vs quick?&#10;&#10;look up in NA commands vs global command?" />
+    <property name="notes" value="current game stats command&#10;&#10;add champ icons&#10;&#10;last three:&#10;&#9;- change the time of game section to be either cleaner &#10;&#9;&#9;or be X hours ago X days ago etc&#10;&#10;" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -137,23 +149,11 @@
       <recent name="C:\Users\evana\IdeaProjects\Iris-Discord-Bot\src\main\resources" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\evana\IdeaProjects\Iris-Discord-Bot\src\main\resources\images" />
       <recent name="C:\Users\evana\IdeaProjects\Iris-Discord-Bot\src\main\resources" />
     </key>
   </component>
   <component name="RunManager" selected="Application.IrisMain">
-    <configuration name="IrisMain (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="me.evana.command.IrisMain" />
-      <module name="Iris-Discord-Bot" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="me.evana.command.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="IrisMain" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="ALTERNATIVE_JRE_PATH" value="1.8" />
       <option name="MAIN_CLASS_NAME" value="me.evana.command.IrisMain" />
@@ -162,13 +162,28 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+    <configuration name="IrisMain" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="me.evana.command.IrisMain" />
+      <module name="Iris-Discord-Bot" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="me.evana.command.emotes.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="class" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -209,7 +224,8 @@
       <workItem from="1619039405972" duration="255000" />
       <workItem from="1619039678759" duration="2209000" />
       <workItem from="1619369019749" duration="21000" />
-      <workItem from="1619373205622" duration="3290000" />
+      <workItem from="1619373205622" duration="3512000" />
+      <workItem from="1619376789782" duration="13572000" />
     </task>
     <task id="LOCAL-00001" summary="Sending over new files from IDE">
       <created>1614725824010</created>
@@ -260,7 +276,14 @@
       <option name="project" value="LOCAL" />
       <updated>1619041867966</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Created the quick and main version of &quot;last three games played&quot; command. Also made the command for &quot;last three&quot; shorter and more concise.">
+      <created>1619376715900</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1619376715900</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TodoView">
@@ -356,7 +379,8 @@
     <MESSAGE value="Can now link a discord user with a riot account, making it possible to get information about a player inside a server by just @ing them." />
     <MESSAGE value="Finished implementation of the user match system. Now when a user is added to the database for quick access and lookup, added functionality so that eventually, using commands can be done by just mentioning a user instead of writing all of their information out." />
     <MESSAGE value="Started to transition over to using the &quot;@user&quot; feature of discord for quick access to peoples information. Started a &quot;q&quot; Command things to make a seperate option to lookup players who are not in the database" />
-    <option name="LAST_COMMIT_MESSAGE" value="Started to transition over to using the &quot;@user&quot; feature of discord for quick access to peoples information. Started a &quot;q&quot; Command things to make a seperate option to lookup players who are not in the database" />
+    <MESSAGE value="Created the quick and main version of &quot;last three games played&quot; command. Also made the command for &quot;last three&quot; shorter and more concise." />
+    <option name="LAST_COMMIT_MESSAGE" value="Created the quick and main version of &quot;last three games played&quot; command. Also made the command for &quot;last three&quot; shorter and more concise." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -368,8 +392,23 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/me/evana/command/commands/RiotMatch.java</url>
-          <line>72</line>
+          <line>74</line>
           <option name="timeStamp" value="23" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/me/evana/command/commands/command/LastThree.java</url>
+          <line>49</line>
+          <option name="timeStamp" value="28" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/me/evana/command/commands/commandQuick/QCurrGame.java</url>
+          <line>91</line>
+          <option name="timeStamp" value="36" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/me/evana/command/commands/commandQuick/QCurrGame.java</url>
+          <line>68</line>
+          <option name="timeStamp" value="42" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -377,6 +416,8 @@
       <pinned-members>
         <PinnedItemInfo parentTag="me.evana.command.commands.CommandManager" memberName="commands" />
         <PinnedItemInfo parentTag="me.evana.command.commands.command.HelpCommand" memberName="manager" />
+        <PinnedItemInfo parentTag="net.rithms.riot.api.endpoints.spectator.dto.Perks" memberName="perkIds" />
+        <PinnedItemInfo parentTag="me.evana.command.emotes.EmoteHandler$1" memberName="name" />
         <PinnedItemInfo parentTag="net.rithms.riot.api.endpoints.match.dto.MatchReference" memberName="champion" />
       </pinned-members>
     </pin-to-top-manager>
@@ -385,6 +426,7 @@
         <watch expression="((HikariProxyResultSet)rs).delegate" custom="com.zaxxer.hikari.pool.HikariProxyResultSet" />
         <watch expression="rs" />
         <watch expression="a.get(0).platformId" />
+        <watch expression="((JDAImpl)jda).presence" custom="net.dv8tion.jda.internal.JDAImpl" />
       </configuration>
     </watches-manager>
   </component>

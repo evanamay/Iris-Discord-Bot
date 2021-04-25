@@ -16,7 +16,7 @@ public class DataHolder {
                 return champion;
             }
         }
-        return new Champion(-1, "N/A", "N/A");
+        return new Champion(-1, "N/A", "N/A", null);
     }
     public static List<Champion> getChampions() {
         return champions;

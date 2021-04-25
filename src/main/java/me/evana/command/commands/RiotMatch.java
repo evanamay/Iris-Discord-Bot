@@ -43,6 +43,8 @@ public class RiotMatch {
             if((long) iter.get("queueId") == queueId){
                 if(((String) iter.get("description")).equals("5v5 Draft Pick games")){
                     return "Draft Pick";
+                } else  if(((String) iter.get("description")).equals("5v5 ARAM games")){
+                    return "Aram";
                 }
                 return (String) iter.get("description");
             }
@@ -86,9 +88,9 @@ public class RiotMatch {
     /*
      * Constructs a summoner name (used if the username has spaces)
      */
-    public static String getSummonerName(List<String> argfield, int argNum){
+    public static String getSummonerName(List<String> argfield, int extraArgNum){
         String summonerName = "";
-        for(int i = 0; i < argfield.size()-argNum; i++){
+        for(int i = 0; i < argfield.size()-extraArgNum; i++){
             summonerName+=argfield.get(i);
             if(i+1 != argfield.size()-1){
                 summonerName+=" ";

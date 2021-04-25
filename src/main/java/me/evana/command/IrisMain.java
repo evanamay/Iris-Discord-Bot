@@ -3,20 +3,19 @@ package me.evana.command;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
-import jdk.nashorn.internal.parser.JSONParser;
 import me.evana.command.commands.RiotMain;
 import me.evana.command.database.SQLiteDataSource;
+import me.evana.command.emotes.EmoteHandler;
 import me.evana.command.leagueinfo.Champion;
 import me.evana.command.leagueinfo.DataHolder;
+import net.dv8tion.jda.api.JDA;
 import net.dv8tion.jda.api.JDABuilder;
 import net.dv8tion.jda.api.entities.Activity;
 import net.rithms.riot.api.ApiConfig;
 import net.rithms.riot.api.RiotApi;
-import org.json.simple.JSONObject;
 
 
 import javax.security.auth.login.LoginException;
-import javax.xml.crypto.Data;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
@@ -25,12 +24,12 @@ import java.sql.SQLException;
 import java.util.*;
 
 public class IrisMain {
+    private static JDA jda;
 
-
-    private IrisMain() throws LoginException, SQLException {
+    private IrisMain() throws LoginException, SQLException, IOException {
         SQLiteDataSource.getConnection();
 
-        new JDABuilder()
+        jda = new JDABuilder()
                 .setToken(Config.get("TOKEN"))
                 .addEventListeners(new Listener())
                 .setActivity(Activity.watching("GC's Twitter"))
@@ -38,9 +37,15 @@ public class IrisMain {
 
         initializeRiotApi(Config.get("RIOT"));
 
+
         makeChamps();
 
 
+    }
+
+
+    public static JDA getJda() {
+        return jda;
     }
 
     private void makeChamps() {
@@ -57,7 +62,7 @@ public class IrisMain {
                 String name = element.getAsJsonObject().get("name").getAsString();
                 File logo =
                         new File("src/main/resources/images/" + element.getAsJsonObject().get("image").getAsJsonObject().get("full").getAsString());
-                champs.add(new Champion(key, id, name));
+                champs.add(new Champion(key, id, name, logo));
 
             }
 
@@ -70,7 +75,7 @@ public class IrisMain {
         }
     }
 
-    public static void main(String[] args) throws LoginException, SQLException {
+    public static void main(String[] args) throws LoginException, SQLException, IOException {
         new IrisMain();
     }
 
