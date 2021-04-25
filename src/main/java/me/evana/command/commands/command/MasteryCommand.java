@@ -77,6 +77,6 @@ public class MasteryCommand implements ICommand {
     @Override
     public String getHelp() {
         return "Returns champion mastery of X number of champions\n" +
-                "Usage: `<mastery @<discord user> <list size>`";
+                "Usage: `<mastery @<discord user> <number of champions>`";
     }
 }

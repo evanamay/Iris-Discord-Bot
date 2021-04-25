@@ -1,5 +1,11 @@
 package me.evana.command.commands;
 
+import net.rithms.riot.api.RiotApi;
+import net.rithms.riot.api.RiotApiException;
+import net.rithms.riot.api.endpoints.match.dto.Match;
+import net.rithms.riot.api.endpoints.match.dto.Participant;
+import net.rithms.riot.api.endpoints.match.dto.TeamStats;
+import net.rithms.riot.constant.Platform;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.*;
@@ -35,11 +41,27 @@ public class RiotMatch {
         for(int i = 0; i < jo.size(); i++){
             Map iter = (Map) jo.get(i);
             if((long) iter.get("queueId") == queueId){
+                if(((String) iter.get("description")).equals("5v5 Draft Pick games")){
+                    return "Draft Pick";
+                }
                 return (String) iter.get("description");
             }
         }
 
         return "Error: Gamemode not found";
+    }
+
+    /*
+     * Returns String Win if the game was won otherwise returns Loss
+     */
+    public static String isWin(RiotApi riot, long gameID, Platform platform, String summoner) throws RiotApiException {
+        Match currentMatch = riot.getMatch(Platform.NA,gameID);
+        Participant summonerInGame = currentMatch.getParticipantBySummonerName(summoner);
+        int teamNum = summonerInGame.getTeamId();
+        TeamStats teamStat = currentMatch.getTeamByTeamId(teamNum);
+        String isWin = teamStat.getWin();
+        isWin = isWin.equals("Fail") ? "Loss" : "Win";
+        return isWin;
     }
 
 

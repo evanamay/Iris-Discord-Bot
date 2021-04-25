@@ -1,4 +1,4 @@
-package me.evana.command.commands.command;
+package me.evana.command.commands.commandQuick;
 
 import me.evana.command.ICommand;
 import me.evana.command.commands.CommandContext;
@@ -6,19 +6,24 @@ import me.evana.command.commands.RiotMain;
 import me.evana.command.commands.RiotMatch;
 import me.evana.command.database.SQLiteDataSource;
 import me.evana.command.leagueinfo.DataHolder;
+import net.dv8tion.jda.api.EmbedBuilder;
 import net.dv8tion.jda.api.entities.TextChannel;
 import net.rithms.riot.api.RiotApi;
 import net.rithms.riot.api.RiotApiException;
-import net.rithms.riot.api.endpoints.match.dto.MatchList;
-import net.rithms.riot.api.endpoints.match.dto.MatchReference;
+import net.rithms.riot.api.endpoints.match.dto.*;
 import net.rithms.riot.api.endpoints.summoner.dto.Summoner;
 import net.rithms.riot.constant.Platform;
+
+import java.awt.*;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.Collections;
 import java.util.List;
+import java.util.Locale;
 
-public class GetLast3Games implements ICommand {
+import static me.evana.command.commands.RiotMatch.isWin;
+
+public class QLastThree implements ICommand {
 
     @Override
     public void handle(CommandContext ctx) throws Exception {
@@ -32,7 +37,7 @@ public class GetLast3Games implements ICommand {
             return;
         }
         try {
-            String accountID = getAccountID(args.get(0), args.get(1));
+            String accountID = riot.getSummonerByName((Platform.getPlatformByName(args.get(1))), args.get(0)).getAccountId();
             if (accountID == null) {
                 channel.sendMessage("This summoner does not exist within our database.").queue();
                 return;
@@ -46,16 +51,26 @@ public class GetLast3Games implements ICommand {
             }
 
             List<MatchReference> gameList = matchList.getMatches();
-            channel.sendMessage("Last three games from " + args.get(0)).queue();
+            EmbedBuilder message = new EmbedBuilder();
+
+            message.setColor(Color.blue);
+
+            message.setTitle("Last Three Games from " + args.get(0));
+
             for (int i = 0; i < 3; i++) {
+                String result = isWin(riot, matchList.getMatches().get(i).getGameId(),
+                        Platform.getPlatformByName(args.get(1)), args.get(0));
+                String msg = "";
                 MatchReference currGame = gameList.get(i);
-                channel.sendMessage("Gamemode: " + RiotMatch.queueIdFinder(currGame.getQueue()) +
+                String lane = currGame.getLane().substring(0,1).toUpperCase() + currGame.getLane().substring(1).toLowerCase();
+                msg += "Gamemode: " + RiotMatch.queueIdFinder(currGame.getQueue()) +
                         "\nChampion: " + DataHolder.getChampById(currGame.getChampion()).getName() +
-                        "\nLane: " + RiotMatch.laneFinder(currGame.getLane(),currGame.getRole()) +
+                        "\nLane: " + lane +
                         "\nTime of Game: " + RiotMatch.dateFormatter(currGame.getTimestamp()) +
-                        "\n\n"
-                ).queue();
+                        "\n\n";
+                message.addField("Game " + (i+1) + " (" + result + ")", msg,true);
             }
+            channel.sendMessage(message.build()).queue();
         }catch (RiotApiException e){
             e.printStackTrace();
         }
@@ -64,34 +79,14 @@ public class GetLast3Games implements ICommand {
 
     }
 
-
-    private String getAccountID(String summonerName, String region) {
-        try(ResultSet rs = SQLiteDataSource
-                .getConnection()
-                .createStatement()
-                .executeQuery("SELECT summoner_name, region, account_id FROM player_information")) {
-
-            while(rs.next()){
-                if (summonerName.equals(rs.getString("summoner_name"))
-                        && region.equals(rs.getString("region"))){
-                    return rs.getString("account_id");
-                }
-            }
-        }catch (SQLException e){
-            e.printStackTrace();
-        }
-
-        return null;
-    }
-
     @Override
     public String getName() {
-        return "lastthree";
+        return "ql3";
     }
 
     @Override
     public String getHelp() {
         return "Shows last three games played\n" +
-                "Usage: `<lastthree <summoner name> <region>`";
+                "Usage: `<ql3 <summoner name> <region>`";
     }
 }

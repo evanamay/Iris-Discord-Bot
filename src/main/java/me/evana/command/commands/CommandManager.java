@@ -3,6 +3,7 @@ package me.evana.command.commands;
 import me.evana.command.ICommand;
 import me.evana.command.commands.command.*;
 //import me.evana.command.commands.command.SummonerCommand;
+import me.evana.command.commands.commandQuick.QLastThree;
 import me.evana.command.commands.commandQuick.QMasteryCommand;
 import net.dv8tion.jda.api.events.message.guild.GuildMessageReceivedEvent;
 import net.rithms.riot.api.RiotApiException;
@@ -21,10 +22,11 @@ public class CommandManager {
         addCommand(new HelpCommand(this));
         addCommand(new SetPrefixCommand());
         addCommand(new AddPlayerInfoCommand());
-        addCommand(new GetLast3Games());
+        addCommand(new QLastThree());
         addCommand(new TestCommand());
         addCommand(new QMasteryCommand());
         addCommand(new MasteryCommand());
+        addCommand(new LastThree());
     }
 
     private void addCommand(ICommand cmd) {

@@ -4,16 +4,15 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f4cdd67a-ca4b-46fd-9e9e-008dfa01435f" name="Default Changelist" comment="Sending over new files from IDE">
-      <change afterPath="$PROJECT_DIR$/src/main/java/me/evana/command/commands/commandQuick/QMasteryCommand.java" afterDir="false" />
+    <list default="true" id="f4cdd67a-ca4b-46fd-9e9e-008dfa01435f" name="Default Changelist" comment="Started to transition over to using the &quot;@user&quot; feature of discord for quick access to peoples information. Started a &quot;q&quot; Command things to make a seperate option to lookup players who are not in the database">
+      <change afterPath="$PROJECT_DIR$/src/main/java/me/evana/command/commands/command/LastThree.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/me/evana/command/commands/CommandManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/evana/command/commands/CommandManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/me/evana/command/commands/command/GetLast3Games.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/evana/command/commands/command/GetLast3Games.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/me/evana/command/commands/RiotMatch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/evana/command/commands/RiotMatch.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/me/evana/command/commands/command/GetLast3Games.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/evana/command/commands/commandQuick/QLastThree.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/me/evana/command/commands/command/MasteryCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/evana/command/commands/command/MasteryCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/me/evana/command/commands/command/GetLast3Games.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/me/evana/command/commands/command/GetLast3Games.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/me/evana/command/commands/command/MasteryCommand.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/me/evana/command/commands/command/MasteryCommand.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/me/evana/command/commands/CommandManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/me/evana/command/commands/CommandManager.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -163,15 +162,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -210,7 +207,9 @@
       <workItem from="1616763325529" duration="145000" />
       <workItem from="1616776630199" duration="19000" />
       <workItem from="1619039405972" duration="255000" />
-      <workItem from="1619039678759" duration="2026000" />
+      <workItem from="1619039678759" duration="2209000" />
+      <workItem from="1619369019749" duration="21000" />
+      <workItem from="1619373205622" duration="3290000" />
     </task>
     <task id="LOCAL-00001" summary="Sending over new files from IDE">
       <created>1614725824010</created>
@@ -254,7 +253,14 @@
       <option name="project" value="LOCAL" />
       <updated>1616611027726</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Started to transition over to using the &quot;@user&quot; feature of discord for quick access to peoples information. Started a &quot;q&quot; Command things to make a seperate option to lookup players who are not in the database">
+      <created>1619041867966</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1619041867966</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TodoView">
@@ -349,7 +355,8 @@
     <MESSAGE value="Created a command in which displays a summoners last three games played and gives information about each game. Mostly done to test the capabilties of the database/RiotApi interactions" />
     <MESSAGE value="Can now link a discord user with a riot account, making it possible to get information about a player inside a server by just @ing them." />
     <MESSAGE value="Finished implementation of the user match system. Now when a user is added to the database for quick access and lookup, added functionality so that eventually, using commands can be done by just mentioning a user instead of writing all of their information out." />
-    <option name="LAST_COMMIT_MESSAGE" value="Finished implementation of the user match system. Now when a user is added to the database for quick access and lookup, added functionality so that eventually, using commands can be done by just mentioning a user instead of writing all of their information out." />
+    <MESSAGE value="Started to transition over to using the &quot;@user&quot; feature of discord for quick access to peoples information. Started a &quot;q&quot; Command things to make a seperate option to lookup players who are not in the database" />
+    <option name="LAST_COMMIT_MESSAGE" value="Started to transition over to using the &quot;@user&quot; feature of discord for quick access to peoples information. Started a &quot;q&quot; Command things to make a seperate option to lookup players who are not in the database" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -360,9 +367,9 @@
           <option name="timeStamp" value="15" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/me/evana/command/commands/command/MasteryCommand.java</url>
-          <line>61</line>
-          <option name="timeStamp" value="19" />
+          <url>file://$PROJECT_DIR$/src/main/java/me/evana/command/commands/RiotMatch.java</url>
+          <line>72</line>
+          <option name="timeStamp" value="23" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
