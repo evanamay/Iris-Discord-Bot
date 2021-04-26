@@ -4,8 +4,7 @@ import me.duncte123.botcommons.BotCommons;
 import me.evana.command.commands.CommandManager;
 import me.evana.command.database.SQLiteDataSource;
 import net.dv8tion.jda.api.JDA;
-import net.dv8tion.jda.api.entities.Emote;
-import net.dv8tion.jda.api.entities.User;
+import net.dv8tion.jda.api.entities.*;
 import net.dv8tion.jda.api.events.ReadyEvent;
 import net.dv8tion.jda.api.events.message.guild.GuildMessageReceivedEvent;
 import net.dv8tion.jda.api.hooks.ListenerAdapter;
@@ -29,14 +28,6 @@ public class Listener extends ListenerAdapter {
     private boolean FirstTime = true;
     @Override
     public void onReady(@Nonnull ReadyEvent event) {
-        if(FirstTime){
-            try {
-                loadEmotes();
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-            FirstTime = false;
-        }
         LOGGER.info("{} is ready", event.getJDA().getSelfUser().getAsTag());
     }
 

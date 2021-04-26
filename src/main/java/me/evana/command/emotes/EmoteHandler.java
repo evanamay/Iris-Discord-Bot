@@ -68,6 +68,7 @@ public class EmoteHandler {
 
 
 
+
 //        try(final BufferedReader reader = new BufferedReader(new FileReader(Ressources.GUILD_EMOTES_FILE));) {
 //            String line;
 //            while((line = reader.readLine()) != null) {
